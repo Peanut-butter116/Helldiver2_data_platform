@@ -207,7 +207,7 @@ if page == "Overview":
             "ROI Score": ["High", "Medium", "Very High"],
         }
     )
-    st.dataframe(channels_df, use_container_width=True, hide_index=True)
+    st.dataframe(channels_df, use_container_width=True)
     st.markdown(
         "<div class='recommend-box'><b>Recommendation:</b> Increase Bilibili creator budget, optimise Douyin creative, and strengthen friend referral incentives.</div>",
         unsafe_allow_html=True,
@@ -257,7 +257,7 @@ elif page == "Behavior Insights":
             "Failure Rate": ["58%", "43%", "37%"],
         }
     )
-    st.dataframe(drop_df, use_container_width=True, hide_index=True)
+    st.dataframe(drop_df, use_container_width=True)
 
     st.markdown("### Social Behaviour Snapshot")
     st.markdown(
@@ -292,7 +292,7 @@ elif page == "Experiments & Automation":
             "Action": ["Roll out to all", "Extend test", "View report"],
         }
     )
-    st.dataframe(exp_df, use_container_width=True, hide_index=True)
+    st.dataframe(exp_df, use_container_width=True)
 
     section_card("Live Automation Rules")
     st.markdown(
@@ -350,7 +350,7 @@ elif page == "Community Signals":
             ],
         }
     )
-    st.dataframe(signals_df, use_container_width=True, hide_index=True)
+    st.dataframe(signals_df, use_container_width=True)
 
     rng = np.random.default_rng(42)
     platforms = ["Bilibili", "NGA", "小黑盒", "Tieba", "WeChat Channels", "QQ Group"]
@@ -448,7 +448,7 @@ elif page == "Model Outputs":
                 "ROI score": [92, 61, 69, 75, 98],
             }
         )
-        st.dataframe(attr_df, use_container_width=True, hide_index=True)
+        st.dataframe(attr_df, use_container_width=True)
 
     with tab_d:
         st.markdown("**Inputs:** referral code, WeChat/QQ share, invite clicks, first squad play, accepted invite, D7 retention")
@@ -460,7 +460,7 @@ elif page == "Model Outputs":
         ref_funnel = pd.DataFrame({"stage": ["Invite Sent", "Invite Click", "Install", "First Squad", "D7 Retained"], "count": [18000, 9100, 4200, 1700, 760]})
         st.plotly_chart(go.Figure(go.Funnel(y=ref_funnel["stage"], x=ref_funnel["count"], marker={"color": ["#5bd0ff", "#71b5ff", "#8f98ff", "#aa7eff", "#ca66ff"]})).update_layout(template=plotly_template, height=350), use_container_width=True)
         chain_df = pd.DataFrame({"seed_player": ["A102", "B773", "C559", "D098"], "invite_chain_len": [5, 4, 3, 3], "squad_conversion": [0.42, 0.37, 0.29, 0.26]})
-        st.dataframe(chain_df, use_container_width=True, hide_index=True)
+        st.dataframe(chain_df, use_container_width=True)
 
 else:
     st.title("Case Study: Cyber Shanghai Defence")
@@ -527,4 +527,4 @@ else:
             ],
         }
     )
-    st.dataframe(strategy_df, use_container_width=True, hide_index=True)
+    st.dataframe(strategy_df, use_container_width=True)
