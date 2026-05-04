@@ -35,4 +35,4 @@ streamlit run app.py
 ```
 
 ## Deployment
-Go to this link to view my public demo: [text](https://helldiver2dataplatform-demo-scarlett.streamlit.app/)
+Go to this link to view my public demo: [StreamlitAPP](https://helldiver2dataplatform-demo-scarlett.streamlit.app/)
